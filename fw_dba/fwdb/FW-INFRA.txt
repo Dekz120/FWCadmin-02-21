@@ -1,0 +1,33 @@
+FW-INFRA 1 1 //to from any
+
+interactions:   //(from/ to)
+FW-fProd	1 1 1 1
+FW-bBrod 1 1 1 1
+FW-INFRA 1 1 1 1
+FW-MANAG 1 1 1 1
+FW-DEV 1 1 1 1
+FW-TEST	1 1 1 1
+FW-cOMPsERV 1 1 1 1
+FW-USERS 1 1 1 1
+FW-Dev-users 1 1 1 1
+fw-wifi 1 1 1 1
+DMZ-eCom 1 1 1 1
+DMZ-user	 1 1 1 1
+DMZ-TESTS â1 1 1 1
+
+endInteractions ;
+
+interfaces:
+interface:
+inside 10.130.1.55 1 1 0//role-in-out
+10.130.0.0/16
+10.131.1.0/24
+10.132.8.0/25
+255.255.255.255/32
+endInterface
+
+interface:
+outside 10.130.1.65 0 1 0 //role-in-out
+0.0.0.0/0
+255.255.255.255/32
+endInterface

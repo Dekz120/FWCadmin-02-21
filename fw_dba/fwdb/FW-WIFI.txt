@@ -1,0 +1,23 @@
+FW-WIFI 0 0 //to from any
+
+interactions:   //(from/ to)
+FW-INFRA 1 1 0 0 Infra
+FW-TEST 1 1 0 0 test
+FW-DEV 1 1 0 0 DEV
+FW-DMZ-TEST 1 1 0 0 dmz-dev
+endInteractions ;
+
+interfaces:
+interface:
+inside 10.190.1.55 1 1 0//role-in-out
+10.190.0.0/16
+10.191.1.0/24
+10.192.8.0/25
+255.255.255.255/32
+endInterface
+
+interface:
+outside 10.190.1.65 0 1 0 //role-in-out
+0.0.0.0/0
+255.255.255.255/32
+endInterface

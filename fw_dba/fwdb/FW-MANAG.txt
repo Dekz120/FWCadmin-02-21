@@ -1,0 +1,29 @@
+FW-MANAG 0 0 //to from any
+
+interactions:   //(from/ to)
+FW-MANAG 1 1 1 1 The same zone dude
+FW-INFRA 1 1 1 1 Infra
+FW-USERS 1 0 0 0 users
+FW-Dev-users 1 0 0 0 developers
+fw-wifi 1 0 0 0 wifi
+FW-fProd	0 1 0 0 prodF
+FW-bBrod 0 1 0 0 prodB
+FW-DEV	0 1 0 0 fw-dev
+FW-TEST	0 1 0 0 fw-test
+FW-cOMPsERV 0 1 0 0
+endInteractions ;
+
+interfaces:
+interface:
+inside 10.140.1.55 1 1 0//role-in-out
+10.140.0.0/16
+10.141.1.0/24
+10.142.8.0/25
+255.255.255.255/32
+endInterface
+
+interface:
+outside 10.140.1.65 0 1 0 //role-in-out
+0.0.0.0/0
+255.255.255.255/32
+endInterface

@@ -1,0 +1,23 @@
+FW-bProd 0 0 //to from any
+
+interactions:   //(from/ to/any from/ any to)
+FW-bProd 1 1 1 1 same zone
+FW-fProd 1 1 0 0 Back Prod interaction
+FW-INFRA 1 1 1 1 Infrastructure
+FW-MANAG 1 0 0 0 Management
+endInteractions ;
+
+interfaces:
+interface:
+inside 10.120.1.55 1 1 0 //role-in-out
+10.120.0.0/16
+10.121.1.0/24
+10.122.8.0/25
+255.255.255.255/32
+endInterface
+
+interface:
+outside 10.120.1.65 0 1 0 //role-in-out
+0.0.0.0/0
+255.255.255.255/32
+endInterface

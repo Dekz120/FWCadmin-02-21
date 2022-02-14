@@ -1,0 +1,24 @@
+FW-DMZ-eCom 0 0 //to from any
+
+interactions:   //(from/ to)
+FW-DMZ-eCom 1 1 1 1 and same
+FW-fPROD 1 1 0 0 fProd
+FW-INFRA 1 1 0 0 Infra
+FW-MANAG 1 1 0 0 test
+FW-cOMPsERV 1 1 0 0 Internal Service
+endInteractions ;
+
+interfaces:
+interface:
+inside 10.200.1.55 1 1 0//role-in-out
+10.200.0.0/16
+10.201.1.0/24
+10.200.8.0/25
+255.255.255.255/32
+endInterface
+
+interface:
+outside 10.200.1.65 0 1 0 //role-in-out
+0.0.0.0/0
+255.255.255.255/32
+endInterface
